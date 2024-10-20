@@ -1,0 +1,16 @@
+
+ 1 Go to AWS s3, and create bucket.  
+ 2 Go to AWS IAM, click Roles from left pane, click "create Roles". 
+   - Choose service "elastic container service", then choose "ecs-tasks", 
+     add policy "AmazonECSTaskExecutionRolePolicy" & "AmazonS3FullAccess".
+ 3 Go to Amazon ECR, and create repo.
+   - Open docker desktop in local, 
+     create IAM user and attach "AmazonEC2ContainerRegistryFullAccess" and "AmazonECS_FullAccess" permission policies.
+     run push_image_ecr.py
+ 4 Go to AWS ECS, click "Task definitioins" from left pane, click "create new task definitions".
+   - insert json file. Attach the Roles you created in step 2. (Note, you can do this in python with boto3 too)
+   - Go to AWS CloudWatch, from left pane, click "Log groups", and click "Create log group".
+ 5 Go to AWS ECS, click Clusters from left pane, create cluster.
+ 6 Run run_ecs_task.py
+ 
+ 

@@ -1,0 +1,33 @@
+{
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "family": "test-s3-task2",
+    "containerDefinitions": [
+        {
+            "name": "my-container",
+            "image": "1111111.dkr.ecr.ap-northeast-1.amazonaws.com/test-s3:latest",
+            "essential": true
+			"logConfiguration": {
+				"logDriver": "awslogs",
+				"options": {
+					"awslogs-group": "/ecs/s3-test",
+					"awslogs-region": "ap-northeast-1",
+					"awslogs-stream-prefix": "ecs"
+				}
+			},
+			"environment": [
+				{
+				"name": "ENV_VAR_NAME",
+				"value": "ENV_VAR_VALUE"
+				}
+			]
+        }
+    ],
+    "volumes": [],
+    "networkMode": "awsvpc",
+    "memory": "512",
+    "cpu": "256",
+    "executionRoleArn": "arn:aws:iam::1111111:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::111111:role/test-ecs-task-role"
+}
