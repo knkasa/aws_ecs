@@ -16,10 +16,10 @@
 Setup scheduler to run it (optional):
 Using AWS Console:
 Go to Amazon EventBridge Console:
-1. Create a new rule.
+1. Create a new scheduler.
   - Set the Rule Type to "Schedule" and specify the cron expression for hourly execution:
   - Example: cron(0 * * * ? *) to run at the start of every hour.
-2. Set the Target as ECS:
+  - Set the Target as ECS:
   - For the target, choose ECS Task.
   - Specify the following:
   - Cluster: Select your ECS cluster.
