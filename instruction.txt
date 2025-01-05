@@ -12,5 +12,18 @@
    - Go to AWS CloudWatch, from left pane, click "Log groups", and click "Create log group".
  5 Go to AWS ECS, click Clusters from left pane, create cluster.
  6 Run run_ecs_task.py
- 
+
+Setup scheduler to run it (optional):
+Using AWS Console:
+Go to Amazon EventBridge Console:
+1. Create a new rule.
+  - Set the Rule Type to "Schedule" and specify the cron expression for hourly execution:
+  - Example: cron(0 * * * ? *) to run at the start of every hour.
+2. Set the Target as ECS:
+  - For the target, choose ECS Task.
+  - Specify the following:
+  - Cluster: Select your ECS cluster.
+  - Task Definition: Select the task you created earlier.
+  - Launch Type: Fargate.
+  - Task Count: 1 (since you’re running one task per schedule).
  
