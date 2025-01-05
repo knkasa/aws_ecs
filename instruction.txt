@@ -17,13 +17,11 @@ Setup scheduler to run it (optional):
 Using AWS Console:
 Go to Amazon EventBridge Console:
 1. Create a new scheduler.
-  - Set the Rule Type to "Schedule" and specify the cron expression for hourly execution:
-  - Example: cron(0 * * * ? *) to run at the start of every hour.
-  - Set the Target as ECS:
-  - For the target, choose ECS Task.
+  - Choose "Schedule" from left pane, and specify the time.
+  - Choose the Target as "ECS Run Task".
   - Specify the following:
   - Cluster: Select your ECS cluster.
   - Task Definition: Select the task you created earlier.
-  - Launch Type: Fargate.
+  - Compute option: LaunchType/Fargate.
   - Task Count: 1 (since you’re running one task per schedule).
- 
+  - Choose subnet & security group you used for the container.
