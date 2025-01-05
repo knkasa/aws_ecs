@@ -24,4 +24,5 @@ Go to Amazon EventBridge Console:
   - Task Definition: Select the task you created earlier.
   - Compute option: LaunchType/Fargate.
   - Task Count: 1 (since you’re running one task per schedule).
-  - Choose subnet & security group you used for the container.
+  - Choose subnet you used for the container.
+  - choose role, or create a new one automatically.
