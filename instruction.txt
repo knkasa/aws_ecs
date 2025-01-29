@@ -10,7 +10,7 @@
  4 Go to AWS ECS, click Clusters from left pane, create cluster.
    (Note: If you want to use GPU, you should use EC2, not Fargate, and choose instance type in cluster setting)
  5 Go to AWS ECS, click "Task definitioins" from left pane, click "create new task definitions". 
-   (Note: If using GPU, you'll need to specify "GPU" for "type" in task definition.)
+   (Note: If using GPU, you'll need to specify in task definition.)
    - insert json file. Attach the Roles you created in step 2. (Note, you can do this in python with boto3 too)
    - Go to AWS CloudWatch, from left pane, click "Log groups", and click "Create log group".
 
