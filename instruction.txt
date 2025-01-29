@@ -34,7 +34,7 @@ Go to Amazon EventBridge Console:
   - choose role, or create a new one automatically.
 
 If using AWS Batch, the json file in Role should include ecs-task & Batch like below.
-Don't forget to attach AmazonECSTaskExecutionRolePolicy permission & others like s3.
+Don't forget to attach AmazonECSTaskExecutionRolePolicy permission & others like s3, cloudwatch.
 {
     "Version": "2012-10-17",
     "Statement": [
