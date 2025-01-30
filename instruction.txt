@@ -5,7 +5,7 @@
    - Choose service "elastic container service", then choose "ecs-tasks", 
      add policy "AmazonECSTaskExecutionRolePolicy". (This is for executionRoleArn in task definition json file in step 5)
    - Create another role for the & "AmazonS3FullAccess" policy. (This is for taskRoleArn in task definition json file in step 5)
-   (Note: If you are creating a role for AWS Batch, you'll need "elastic container service" with "ecs-tasks" too.  Then, you'll need to modify TrustRelationship json file to include AWS Batch(see below).
+   (Note: If you are creating a execution role for AWS Batch, you'll need "elastic container service" with "ecs-tasks".  Then, you'll need to modify TrustRelationship json file to include AWS Batch(see below)).
  3 Go to Amazon ECR, and create repo.
    - Open docker desktop in local, (docker needs to be running in background)
      create IAM user and attach "AmazonEC2ContainerRegistryFullAccess" and "AmazonECS_FullAccess" permission policies.
