@@ -1,4 +1,4 @@
-
+why
  1 Go to AWS s3, and create bucket.  
  2 Go to AWS IAM, click Roles from left pane, click "create Roles". 
    (Note: You will need to create two roles, one for ECS, another for other roles like s3.)
@@ -16,7 +16,7 @@
    (Note: If using GPU, you'll need to specify in task definition.)
    - insert json file. Attach the Roles you created in step 2. (Note, you can do this in python with boto3 too)
    - Go to AWS CloudWatch, from left pane, click "Log groups", and click "Create log group".
- 5 Go to AWS ECS, click Clusters from left pane, create cluster, specify the task definition you created.
+ 5 Go to AWS ECS, click Clusters from left pane, create cluster, if asked, specify the task definition you created.
    (Note: If you want to use GPU, you should use EC2, not Fargate, and choose instance type in cluster setting) 
 
  6 Run run_ecs_task.py
