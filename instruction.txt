@@ -3,9 +3,9 @@ why
  2 Go to AWS IAM, click Roles from left pane, click "create Roles". 
    (Note: You will need to create two roles, one for ECS, another for other roles like s3.)
    - Choose service "elastic container service", then choose "ecs-tasks", 
-     (fargate) add policy "AmazonECSTaskExecutionRolePolicy". (This is for executionRoleArn in task definition json file in step 5, you need this role to pull image from ECR)
-     (EC2) add policy "AmazonEC2ContainerServiceforEC2Role" for executionRoleArn.
-   - Create another role for the & "AmazonS3FullAccess" policy. (This is for taskRoleArn in task definition json file in step 5)
+     (For Fargate) add policy "AmazonECSTaskExecutionRolePolicy". (This is for executionRoleArn in task definition json file in step 5, you need this role to pull image from ECR)
+     (For EC2) add policy "AmazonEC2ContainerServiceforEC2Role" for executionRoleArn.
+   - Create another role(elastic container service & ecs-task) and attach your policy like "AmazonS3FullAccess" policy. (This is for taskRoleArn in task definition json file in step 5)
    (Note: If you are creating a execution role for AWS Batch Fargate, you'll need "elastic container service" with "ecs-tasks". then attach AmazonECSTaskExecutionRolePolicy policy plus others)
    (Note: If using AWS Batch EC2, you should choose "EC2" for the AWS service. You may need separate role with ecs-task and AmazonECSTaskExecutionRolePolicy attached for the execution role.)
  3 Go to Amazon ECR, and create repo.
