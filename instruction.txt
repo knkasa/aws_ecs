@@ -20,7 +20,7 @@ why
    (Note: If you want to use GPU, you should use EC2, not Fargate, and choose instance type in cluster setting) 
 
  6 Run run_ecs_task.py, 
-   or, create service from ECS cluster and specify the task definition.
+   or, from AWS console, in ECS, create service from ECS cluster and specify the task definition. Choose "Launch type", "Capacity provider strategy" is for customizing resource for advance users.
 
 Setup scheduler to run it (optional):
 Using AWS Console:
