@@ -18,6 +18,7 @@ why
    - Go to AWS CloudWatch, from left pane, click "Log groups", and click "Create log group".
  5 Go to AWS ECS, click Clusters from left pane, create cluster.
    (Note: If you want to use GPU, you should use EC2, not Fargate, and choose instance type in cluster setting) 
+   (Note: If you want to monitor resource usage, check "Container Insights")
 
  6 Run run_ecs_task.py, 
    or, from AWS console, in ECS, create service from ECS cluster and specify the task definition. Choose "Launch type", "Capacity provider strategy" is for customizing resource for advance users.
@@ -53,3 +54,4 @@ Don't forget to attach AmazonECSTaskExecutionRolePolicy permission & others like
         }
     ]
 }
+
